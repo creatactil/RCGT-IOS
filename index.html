@@ -39,6 +39,32 @@
 .granate {
 	color: #542876;
 }
+/*ordenador zoom bajo*/
+
+@media only screen
+and (max-width: 1440px){
+	#imgportada {
+  background-image:url(imgportada/portada.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+
+/*tablet horizontal*/
+@media only screen
+and (max-width: 1300px){
+	#imgportada {
+  background-image:url(imgportada/portada2.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
 
 /*tablet vertical*/
 @media only screen
@@ -47,6 +73,29 @@ and (max-width: 992px) {
   background-image:url(imgportada/portada2.jpg);
   background-repeat:no-repeat;
   background-position:top;
+  width: 100%;  
+  
+}
+}
+/*movil*/
+@media only screen 
+and (max-width: 768px){
+	#imgportada {
+  background-image:url(imgportada/portada.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain;  
+  width: 100%;  
+  
+}
+}
+@media only screen 
+and (max-width: 450px){
+	#imgportada {
+  background-image:url(imgportada/portada.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain; 
   width: 100%;  
   
 }
@@ -155,11 +204,9 @@ App Diseñada por creaTáctil S.L.
     </div >
     
     <div data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
-   <!-- <br>
-    <center><img id="escudo" src="imgportada/escudo_final.png" width="40%"></center>
-    <br> -->
    
-    <img id="" src="imgportada/portada.jpg" height="0%" width="100%">
+   <div  id="imgportada"  data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%"></div>
+    <!--<img id="" src="imgportada/portada.jpg" height="0%" width="100%">-->
     
     </div> 
     
