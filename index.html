@@ -35,100 +35,46 @@
 	
 </script>
 
+<script>
+    $( document ).ready(function() {
+      	  
+	   var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+   
+    iPAD: function() {
+        return navigator.userAgent.match(/iPad/i);
+    },
+	
+	iPHONE: function() {
+        return navigator.userAgent.match(/iPhone/i);
+    },
+	
+        
+ };
+	   
+	    if(isMobile.Android()){
+    		
+		//nada
+			
+		}else if (isMobile.iPAD()){
+    		
+			$("#portada").attr("src", "imgportada/portada2.jpg");
+		
+		}else if (isMobile.iPHONE()){
+    		
+			$("#portada").attr("src", "imgportada/portada.jpg");
+		}
+    
+	});
+</script>
+
 <style type="text/css">
 .granate {
 	color: #542876;
 }
-/*ordenador zoom bajo*/
 
-@media only screen
-and (max-width: 1440px){
-	#imgportada {
-  background-image:url(imgportada/portada.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height: 100%;  
-  width: 100%;  
-  
-}
-}
-
-/*tablet horizontal*/
-@media only screen
-and (max-width: 1300px){
-	#imgportada {
-  background-image:url(imgportada/portada2.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height: 100%;  
-  width: 100%;  
-  
-}
-}
-
-/*tablet vertical*/
-@media only screen
-and (max-width: 992px) {
-	#imgportada {
-  background-image:url(imgportada/portada3.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height: 100%;
-  width: 100%;  
-  
-}
-}
-/*movil*/
-@media only screen 
-and (max-width: 768px){
-	#imgportada {
-  background-image:url(imgportada/portada2.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height:100%;
-  width: 100%;  
-  
-}
-}
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-	#imgportada {
-  background-image:url(imgportada/portada2.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height:100%;
-  width: 100%;  
-  
-}
-}
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : portrait) {
-	#imgportada {
-  background-image:url(imgportada/portada.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  height:100%;
-  width: 100%;  
-  
-}
-}
-
-
-@media only screen 
-and (max-width: 450px){
-	#imgportada {
-  background-image:url(imgportada/portada.jpg);
-  background-repeat:no-repeat;
-  background-position:top;
-  background-size:contain; 
-  width: 100%;  
-  
-}
-}
 
 </style>
 
@@ -234,8 +180,7 @@ App Diseñada por creaTáctil S.L.
     
     <div data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
    
-   <div  id="imgportada"  data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100% "></div>
-   <!-- <img id="" src="imgportada/portada2.jpg" height="0%" width="100%">-->
+  	<img id="portada" src="" height="0%" width="100%">>
     
     </div> 
     
