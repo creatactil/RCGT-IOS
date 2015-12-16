@@ -91,6 +91,34 @@ and (max-width: 768px){
 }
 }
 @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#imgportada {
+  background-image:url(imgportada/portada2.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height:100%;
+  width: 100%;  
+  
+}
+}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+	#imgportada {
+  background-image:url(imgportada/portada.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height:100%;
+  width: 100%;  
+  
+}
+}
+
+
+@media only screen 
 and (max-width: 450px){
 	#imgportada {
   background-image:url(imgportada/portada.jpg);
