@@ -44,18 +44,23 @@
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
 		<gap:platform name="ios" />
+		
 		<feature name="http://api.phonegap.com/1.0/file"/>
 		<feature name="http://api.phonegap.com/1.0/media"/>
 		<feature name="http://api.phonegap.com/1.0/network"/>
 		<feature name="http://api.phonegap.com/1.0/notification"/>
 		<feature name="http://api.phonegap.com/1.0/device"/>
 		
+		<feature name="PushPlugin">
+  			<param name="ios-package" value="PushPlugin" />
+		</feature>
+		
 		<plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="2.5.0" />
 		<plugin name="org.apache.cordova.battery-status" source="pgb" spec="0.2.11" />
 		<plugin name="org.apache.cordova.camera" source="pgb" spec="0.3.2" />
 		<plugin name="org.apache.cordova.console" source="pgb" spec="0.2.13" />
 		<plugin name="org.apache.cordova.contacts" source="pgb" spec="0.2.13" />
-		<plugin name="org.apache.cordova.device" source="pgb" spec="0.2.12" />
+		<plugin name="org.apache.cordova.device" source="pgb" spec="0.3.0" />
 		<plugin name="org.apache.cordova.device-motion" source="pgb" spec="0.2.10" />
 		<plugin name="org.apache.cordova.device-orientation" source="pgb" spec="0.3.9" />
 		<plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.2.10" />
