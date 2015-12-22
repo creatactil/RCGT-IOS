@@ -92,8 +92,7 @@ var app = {
 					//alert (uuid);
 				
 					console.log(uuid);
-	   			
-					
+	   								
                 }
             break;
  
