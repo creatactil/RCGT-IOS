@@ -82,16 +82,7 @@ var app = {
                    //alert('Registro id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
-					localStorage.regid = e.regid;
-					//alert (e.regid);
-					console.log(e.regid);
 					
-					var uuid = device.uuid;
-		
-					localStorage.uuid = uuid;
-					//alert (uuid);
-				
-					console.log(uuid);
 	   								
                 }
             break;
@@ -114,8 +105,17 @@ var app = {
     },
     onNotificationAPN: function(event) {
         var pushNotification = window.plugins.pushNotification;
-        //alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+        alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+					localStorage.regid = e.regid;
+					alert (event);
+					console.log(e.regid);
+					
+					var uuid = device.uuid;
 		
+					localStorage.uuid = uuid;
+					//alert (uuid);
+				
+					console.log(uuid);
 		
         
         if (event.alert) {
