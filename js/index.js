@@ -65,7 +65,7 @@ var app = {
     successHandler: function(result) {
        //alert('Callback Success! Result = '+result)
 	   //document.getElementById('regId').value = result;
-	   
+	   console.log(result);
 	   
 	   //alert(result);
     },
@@ -79,10 +79,19 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                   alert('Registro id = '+e.regid);
+                   //alert('Registro id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
+					localStorage.regid = e.regid;
+					//alert (e.regid);
+					console.log(e.regid);
+					
+					var uuid = device.uuid;
+		
+					localStorage.uuid = uuid;
+					//alert (uuid);
 				
+					console.log(uuid);
 	   								
                 }
             break;
@@ -105,19 +114,8 @@ var app = {
     },
     onNotificationAPN: function(event) {
         var pushNotification = window.plugins.pushNotification;
-        
-		alert("En apn");
-		alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
-					localStorage.regid = e.regid;
-					alert ('event');
-					console.log(e.regid);
-					
-					var uuid = device.uuid;
+        //alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
 		
-					localStorage.uuid = uuid;
-					//alert (uuid);
-				
-					console.log(uuid);
 		
         
         if (event.alert) {
