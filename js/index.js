@@ -65,8 +65,17 @@ var app = {
     successHandler: function(result) {
        //alert('Callback Success! Result = '+result)
 	   document.getElementById('regId').value = result;
-	   alert(result);
-	   
+	   				localStorage.regid = result;
+					//alert (e.regid);
+					console.log(result);
+					
+					var uuid = device.uuid;
+		
+					localStorage.uuid = uuid;
+					//alert (uuid);
+				
+					console.log(uuid);
+	    	   
 	   //alert(result);
     },
     errorHandler:function(error) {
@@ -82,16 +91,7 @@ var app = {
                    //alert('Registro id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
-					localStorage.regid = e.regid;
-					//alert (e.regid);
-					console.log(e.regid);
 					
-					var uuid = device.uuid;
-		
-					localStorage.uuid = uuid;
-					//alert (uuid);
-				
-					console.log(uuid);
 	   								
                 }
             break;
