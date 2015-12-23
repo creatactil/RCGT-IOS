@@ -6,7 +6,7 @@ function registrarColegiado() {
     		  	var xapellidos = $("#apellidos").val().toUpperCase();
 				var xcorreo = $("#correo").val();
 				var xpa1 = $("#pa1").val();
-								
+			
 				var xregid = localStorage.regid;
 				var xuuid = localStorage.uuid;
 					
