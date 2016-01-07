@@ -28,6 +28,9 @@ function listafavorito() {
 			var id_aux = item.id_aux;
 			var cial = item.cial;
 			
+			
+			$('#id'+index).remove();
+			
 			var verde = "#006837";
 			
 			if(estado==0){
@@ -79,6 +82,7 @@ function listafavorito() {
                                   '<br>'+
 								  'Fecha: '+item.fecha+'</p>'+
 								  '<p>'+ item.texto + '</p>' +
+								  '<p><strong>'+item.nombre+'</strong></p>'+
 								  '<br>'+
                                   '<a href="" onclick="descargarArchivo(\''+item.enlace+'\')" >'+item.enlace+'</a>'+
 								  '<br>'+
